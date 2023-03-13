@@ -5,7 +5,6 @@ import secrets
 from flask_sslify import SSLify
 from flask_talisman import Talisman
 from utils.database import init_pool, get_movie_reviews, save_movie_review
-import os
 app = Flask(__name__)
 app.config['SECRET_KEY'] = secrets.token_hex(32)
 app.config['SESSION_COOKIE_SECURE'] = True
@@ -196,5 +195,4 @@ def clear_searches():
 
 
 if __name__ == '__main__':
-    port = int(os.environ.get("PORT", 8000))
-    app.run(host="0.0.0.0", port=port)
+    app.run(debug=False)
