@@ -1,10 +1,6 @@
 # Movie-Reviewer
 A python flask project which allows users to search for a movie by name or IMDb ID and comment their thoughts which other users can view.
 
-## Get started
-
-https://movie-reviewer.herokuapp.com/
-
 ## Technologies used
 
 - Python
