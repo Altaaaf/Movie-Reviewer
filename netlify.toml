@@ -1,7 +1,8 @@
-[build]
-  command = "pip install -r requirements.txt && gunicorn app:app"
 [[redirects]]
   from = "/"
   to = "https://movie-reviewer-app.netlify.app"
   status = 200
   force = true
+
+[build]
+  command = "pip install -r requirements.txt && gunicorn app:app"
