@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Movie Search - Error
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Oops, something went wrong!</h1>
+    {% if error_msg %}
+        <p>{{ error_msg }}</p>
+    {% else %}
+        <p>Please try again</p>
+    {% endif %}
+    <a class="btn btn-primary" href="/">Search for a movie</a>
+</div>
+{% endblock %}

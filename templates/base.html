@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #0c1d3e;
+            color: #fff;
+        }
+        .container {
+            margin-top: 50px;
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 30px;
+        }
+        a.btn.btn-primary {
+            margin-top: 20px;
+        }
+        .card {
+            background-color: #1d3557;
+            margin-top: 50px;
+            color: #fff;
+        }
+
+        .card img {
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .card-title {
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        .card-text {
+            margin-top: 20px;
+        }
+        
+        .btn-back {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    {% block content %}
+    {% endblock %}
+</div>
+</body>
+</html>

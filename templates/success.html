@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Movie Search - Saved review
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Successfully saved review</h1>
+    <a class="btn btn-primary" href="/">Search for a new movie</a>
+    <a class="btn btn-primary" href={{previous_movie}}>Return to previous movie</a>
+</div>
+{% endblock %}

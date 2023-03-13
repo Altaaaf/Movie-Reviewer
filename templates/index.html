@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %}
+Movie Search - Home
+{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h1 class="text-center mb-4">Movie Search</h1>
+            <form method="POST" action="{{ url_for('search') }}">
+                <div class="form-group">
+                    <input type="text" class="form-control" name="movie_name" placeholder="Enter movie name" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Search</button>
+            </form>
+            {% if 'searches' in session %}
+            <hr>
+            <h3>Previous Searches:</h3>
+            <button type="button" class="btn btn-outline-danger" onclick="clearSearches()">Clear Searches</button>
+            <br>
+            <br>
+            {% for search in session['searches'] %}
+                <a href="{{ url_for('movie_search', movie_name=search) }}">
+                    <button type="button" class="btn btn-outline-primary">{{ search }}</button>
+                </a>
+            {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+</div>
+<script>
+    function clearSearches() {
+        fetch('{{ url_for("clear_searches") }}', { method: 'POST' })
+            .then(response => {
+                if (response.ok) {
+                    location.reload();
+                } else {
+                    throw new Error('Failed to clear searches');
+                }
+            })
+            .catch(error => {
+                alert(error.message);
+            });
+    }
+</script>
+{% endblock %}
