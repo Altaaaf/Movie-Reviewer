@@ -2,6 +2,7 @@ from bs4 import BeautifulSoup
 import requests
 import json
 import re
+import html
 
 
 def get_movie_id(movie_name):
@@ -82,6 +83,7 @@ def get_imdb_movie_details(movie_id: str) -> tuple:
             name = movie_dict['name']
             image = movie_dict['image']
             description = movie_dict['description']
+            description = html.unescape(description)
             trailer = movie_dict['trailer']['embedUrl']
             rating_value = movie_dict['aggregateRating']['ratingValue']
             total_rating = movie_dict['aggregateRating']['ratingCount']

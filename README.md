@@ -7,11 +7,11 @@ https://movie-reviewer.herokuapp.com/
 
 ## Technologies used
 
-- [x] Python
-- [x] Flask
-- [x] SQLite3
-- [x] Requests
-- [x] BeautifulSoup
+- Python
+- Flask
+- SQLite3
+- Requests
+- BeautifulSoup
 
 ## Features
 
@@ -19,4 +19,4 @@ https://movie-reviewer.herokuapp.com/
 - [x] Search for movie using movie name or IMDb movie id from IMDb
 - [x] Comment and view users comments on any movie
 - [x] View previous searches on current session
-- [x] Will add more eventually
+- [ ] Will add more eventually
