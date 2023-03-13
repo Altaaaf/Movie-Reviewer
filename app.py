@@ -1,10 +1,10 @@
 from flask import Flask, render_template, request, redirect, url_for, session
-from movie import get_imdb_movie_details, get_movie_id
+from utils.movie import get_imdb_movie_details, get_movie_id
 import re
 import secrets
 from flask_sslify import SSLify
 from flask_talisman import Talisman
-from database import init_pool, get_movie_reviews, save_movie_review
+from utils.database import init_pool, get_movie_reviews, save_movie_review
 app = Flask(__name__)
 app.config['SECRET_KEY'] = secrets.token_hex(32)
 app.config['SESSION_COOKIE_SECURE'] = True
